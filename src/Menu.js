@@ -21,8 +21,8 @@ function Menu() {
             {/* Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library */}
             <li className="nav-item">
-            <Link to="/about">
-              <a href="/about" className="nav-link">
+            <Link to="/input">
+              <a href="/input" className="nav-link">
                 <i className="nav-icon fas fa-pencil-alt" />
                 <p>
                   Input Data
@@ -31,8 +31,8 @@ function Menu() {
             </Link>
             </li>
             <li className="nav-item">
-            <Link to="/about">
-              <a href="/about" className="nav-link">
+            <Link to="/addnode">
+              <a href="/addnode" className="nav-link">
                 <i className="nav-icon fas fa-desktop" />
                 <p>
                   Add Node

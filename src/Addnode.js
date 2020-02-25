@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import axios from 'axios';
 const queryString = require('query-string');
 // function About() {
-class About extends Component {
+class Addnode extends Component {
 
   state = {
     field1: '',
@@ -29,7 +29,7 @@ class About extends Component {
       }
     }
 
-    axios.post('http://127.0.0.1:8000/send', queryString.stringify(requestBody),config)
+    axios.post('http://xxx/addnode', queryString.stringify(requestBody),config)
       .then(res => {
         console.log(res);
       })
@@ -46,7 +46,7 @@ class About extends Component {
           <div className="container-fluid">
             <div className="row mb-2">
               <div className="col-sm-6">
-                <h1>Dashboard</h1>
+                <h1>Add Node</h1>
               </div>
               <div className="col-sm-6">
                 <ol className="breadcrumb float-sm-right">
@@ -78,8 +78,12 @@ class About extends Component {
                     <form onSubmit={this.handleSubmit}>
                       <div className="card-body">
                         <div className="form-group">
-                          <label htmlFor="exampleInputEmail1">Field1</label>
-                          <input type="text" className="form-control" id="exampleInputEmail1" name="field1" onChange={this.handleChange} placeholder="Masukan field1" />
+                          <label htmlFor="exampleInputEmail1">Ip</label>
+                          <input type="text" className="form-control" id="exampleInputEmail1" name="field1" onChange={this.handleChange} placeholder="Masukan ip" />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="exampleInputEmail1">Port</label>
+                          <input type="text" className="form-control" id="exampleInputEmail1" name="field1" onChange={this.handleChange} placeholder="Masukan port" />
                         </div>
                         <button type="submit" className="mt-4 btn btn-primary">Kirim</button>
                       </div>
@@ -99,4 +103,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Addnode;
